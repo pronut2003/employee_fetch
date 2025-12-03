@@ -1,6 +1,7 @@
 from fastapi import FastAPI,HTTPException
 from models import Employee, Promotion
 from mongoengine import connect, LongField
+from mangum import Mangum
 
 connect(
     db="employeedb",
@@ -8,6 +9,7 @@ connect(
 )
 
 app = FastAPI()
+handler = Mangum(app)
 
 @app.get("/")
 def home():
