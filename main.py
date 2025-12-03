@@ -11,7 +11,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Hello World fetching"}
+    return {"message": "Microservice fetching"}
 
 @app.get("/employee")
 def get_employee():
