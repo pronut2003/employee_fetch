@@ -1,11 +1,11 @@
 {
   "version": 2,
   "functions": {
-    "main.py": {
+    "employee_fetch/main.py": {
       "runtime": "python3.11"
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "main.py" }
+    { "src": "/(.*)", "dest": "employee_fetch/main.py" }
   ]
 }
